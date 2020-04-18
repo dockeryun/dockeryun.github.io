@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>about | dockeryun |一个神奇的网站</title>
+  <title>python基础学习01 | dockeryun |一个神奇的网站</title>
   <meta name="keywords" content="">
-  <meta name="description" content="about | dockeryun |一个神奇的网站">
+  <meta name="description" content="python基础学习01 | dockeryun |一个神奇的网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="阳光总是那么的迷人">
 <meta property="og:type" content="website">
@@ -196,19 +196,25 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-python_01" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">python基础学习01</h1>
     
     <div class="article-meta">
         
         
+        
+        <span class="book">
+            
+                <a  data-rel="python">python</a>
+            
+        </span>
         
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-04-18 21:42:02'>2020-04-18 21:42</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-18 22:04:18'>2020-04-18 22:02</time>
         
     </div>
     <div class="article-meta">
@@ -219,7 +225,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pyenv-安装及配置"><span class="toc-text">pyenv  安装及配置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -235,7 +241,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="pyenv-安装及配置"><a href="#pyenv-安装及配置" class="headerlink" title="pyenv  安装及配置"></a>pyenv  安装及配置</h2><p>1.安装依赖</p>
+<pre><code>install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvmgit </code></pre><ol start="2">
+<li>自动化脚本<pre><code>curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash </code></pre></li>
+<li>配置环境变量<pre><code>echo -e &#39;\n#pyenv&#39; &gt;&gt;~/.bashrc
+echo &#39;export PATH=&quot;$HOME/.pyenv/bin:$PATH&quot;&#39; &gt;&gt; ~/.bashrc
+echo &#39;eval &quot;$(pyenv init -)&quot;&#39; &gt;&gt; ~/.bashrc
+echo &#39;eval &quot;$(pyenv virtualenv-init -)&quot;&#39; &gt;&gt; ~/.bashrc
+</code></pre></li>
+</ol>
+<p>source ~/.bashrc</p>
+<pre><code>### 常用命令
+</code></pre><p>pyenv version        # 查看当前系统使用的python版本<br>pyenv versions        # 查看当前系统拥有的python版本<br>pyenv install 3.7.4         # </p>
+<p>pyenv local 3.7.4     # local仅对当前目录及子目录生效，告诉当前目录使用版本3.7.4，<br>pyenv global          # 告诉全局环境使用某个版本，为了不破坏系统环境，不建议使用global设置全局版本<br>pyenv rehash          # 重建环境变量，每当你增删 Python 版本或带有可执行文件的包（如 pip）以后，都应该执行一次本命令</p>
+<p>##pyenv virtualenv  用法</p>
+<p>pyenv virtualenv  3.7.4  py374 </p>
+<p>pyenv local  py374<br>pyenv activate  py374<br>切换到新的虚拟环境的命令</p>
+<p>pyenv deactivate<br>切换回系统环境</p>
+<pre><code>
+## pip 加速
+ * windwos
+
+最后创建pip.ini文件，写入如下内容</code></pre><p>[global]<br>index-url = <a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">https://mirrors.aliyun.com/pypi/simple/</a><br>[install]<br>trusted-host=mirrors.aliyun.com</p>
+<pre><code> * linux</code></pre><p>mkdir ~/.pip<br>cat &gt; ~/.pip/pip.conf &lt;&lt; EOF<br>[global]<br>trusted-host=mirrors.aliyun.com<br>index-url=<a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">https://mirrors.aliyun.com/pypi/simple/</a><br>EOF</p>
+<pre><code>
+## 安装 django2.2</code></pre><p>pip install django==2.2  -i <a href="http://mirrors.aliyun.com/pypi/simple" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple</a>  </p>
+<pre><code></code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -246,6 +277,18 @@
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>python基础学习01</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="dockeryun">dockeryun</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-04-18, 22:02:22</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-18, 22:04:18</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/18/python_01/" title="python基础学习01">https://dockeryun.github.io/2020/04/18/python_01/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
